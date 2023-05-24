@@ -5,9 +5,12 @@ import PostWidget from "./PostWidget";
 
 const PostsWidget = ({ userId, isProfile = false }) => {
   const dispatch = useDispatch();
-  const posts = useSelector((state) => state.posts);
+  // const posts = useSelector((state) => state.posts);
+  const data22 = useSelector((state) => state.posts);
+  console.log(data22)
+   const posts = data22
   const token = useSelector((state) => state.token);
-
+  console.log(posts)
   const getPosts = async () => {
     const response = await fetch("http://localhost:3001/posts", {
       method: "GET",
