@@ -20,8 +20,7 @@ const UserWidget = ({ userId, picturePath }) => {
   const dark = palette.neutral.dark;
   const medium = palette.neutral.medium;
   const main = palette.neutral.main;
-  const apiURL = "https://server-09wr.onrender.com"
-
+  const apiURL = `https://server-09wr.onrender.com`
   const getUser = async () => {
     const response = await fetch(`${apiURL}/users/${userId}`, {
       method: "GET",

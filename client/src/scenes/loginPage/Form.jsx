@@ -54,7 +54,7 @@ const Form = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
-  const apiURL = "https://server-09wr.onrender.com"
+  const apiURL = `https://server-09wr.onrender.com`
 
   const register = async (values, onSubmitProps) => {
     // this allows us to send form info with image

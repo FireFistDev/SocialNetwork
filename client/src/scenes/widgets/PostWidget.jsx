@@ -33,7 +33,7 @@ const PostWidget = ({
   const { palette } = useTheme();
   const main = palette.neutral.main;
   const primary = palette.primary.main;
-  const apiURL = "https://server-09wr.onrender.com"
+  const apiURL = `https://server-09wr.onrender.com`
   const patchLike = async () => {
     const response = await fetch(`${apiURL}/posts/${postId}/like`, {
       method: "PATCH",

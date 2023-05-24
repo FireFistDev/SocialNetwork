@@ -7,11 +7,9 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   const dispatch = useDispatch();
   // const posts = useSelector((state) => state.posts);
   const data22 = useSelector((state) => state.posts);
-  console.log(data22)
    const posts = data22
   const token = useSelector((state) => state.token);
-  console.log(posts)
-  const apiURL = "https://server-09wr.onrender.com"
+  const apiURL = `https://server-09wr.onrender.com`
   const getPosts = async () => {
     const response = await fetch(`${apiURL}/posts`, {
       method: "GET",

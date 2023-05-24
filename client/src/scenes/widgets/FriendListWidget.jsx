@@ -10,7 +10,7 @@ const FriendListWidget = ({ userId }) => {
   const { palette } = useTheme();
   const token = useSelector((state) => state.token);
   const friends = useSelector((state) => state.user.friends);
-  const apiURL = "https://server-09wr.onrender.com"
+  const apiURL = `https://server-09wr.onrender.com`
   const getFriends = async () => {
     const response = await fetch(
       `${apiURL}/users/${userId}/friends`,
