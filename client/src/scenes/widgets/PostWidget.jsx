@@ -29,13 +29,13 @@ const PostWidget = ({
   const loggedInUserId = useSelector((state) => state.user._id);
   const isLiked = Boolean(likes[loggedInUserId]);
   const likeCount = Object.keys(likes).length;
-
+  const apiURL = "https://server-09wr.onrender.com"
   const { palette } = useTheme();
   const main = palette.neutral.main;
   const primary = palette.primary.main;
-  const apiURL = `https://server-09wr.onrender.com`
+
   const patchLike = async () => {
-    const response = await fetch(`${apiURL}/posts/${postId}/like`, {
+    const response = await fetch(`http://localhost:3001/posts/${postId}/like`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,

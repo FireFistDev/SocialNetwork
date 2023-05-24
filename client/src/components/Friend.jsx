@@ -22,7 +22,6 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const isFriend = friends.find((friend) => friend._id === friendId);
   const apiURL = `https://server-09wr.onrender.com`
   const patchFriend = async () => {
-    const apiURL = "https://server-09wr.onrender.com"
     const response = await fetch(
       `${apiURL}/users/${_id}/${friendId}`,
       {
