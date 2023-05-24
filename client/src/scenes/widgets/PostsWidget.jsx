@@ -7,9 +7,17 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   const dispatch = useDispatch();
   // const posts = useSelector((state) => state.posts);
   const data22 = useSelector((state) => state.posts);
+<<<<<<< HEAD
    const posts = data22
   const token = useSelector((state) => state.token);
   const apiURL = `https://server-09wr.onrender.com`
+=======
+
+   const posts = data22
+  const token = useSelector((state) => state.token);
+
+  const apiURL = "https://server-09wr.onrender.com"
+>>>>>>> d438c7b83d1bfea5709f50a7545d87f05cb8b4fd
   const getPosts = async () => {
     const response = await fetch(`${apiURL}/posts`, {
       method: "GET",
@@ -61,7 +69,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
             name={`${firstName} ${lastName}`}
             description={description}
             location={location}
-            picturePath={picturePath}
+            picturePath={`${apiURL}/assets/${picturePath}`}
             userPicturePath={userPicturePath}
             likes={likes}
             comments={comments}
